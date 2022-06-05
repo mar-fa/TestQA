@@ -1,0 +1,41 @@
+Рзбор ошибок(Build number #324)
+
+1) Error calling context method (FindObjects):
+_1002000 preparation (vendors aging)
+Ошибка при обновлении ItemKeys. Возможно не успел выполниться шаг.
+ 
+
+2)Failed to click <ListContextMenuUndoPosting> button.
+_1020030 create Debit note and check Aging register movements
+Не удалось найти кнопку "ListContextMenuUndoPosting". Не выбран документ, спиок документов для проверки пуст.
+Только не понятно почему он мог не записаться? Дата документа 06.02.2022, возможно закрыт период?
+
+3)The button named <OK> is not found.
+_800009 check remaining stock control serial lot numbers in the Sales invoice (without SO and SC)
+_800012 check remaining stock control serial lot numbers in the Retail sales receipt
+_800018 check remaining stock control serial lot number in the Stock adjustment as write off
+_800021 check remaining stock control in the Purchase return
+_800023 check remaining stock control serial lot number in the shipment confirmation
+Во всех ошибках не удалось найти кнопку "ОК" на форме сообщения об ошибке после нажария кнопки "Post". Не понятно почему, потому что на скрине видно, что кнопка есть.
+
+
+4)Unable to move to the required line in <List> table.
+
+_1002009 create Cash payment and check Aging register movements
+Не удалось заполнить в документе CashPayment реквизит "Basis document" значением '$$PurchaseInvoiceAging1$$'. 
+
+_1002015 create Bank payment and check Aging register movements
+Не удалось заполнить в документе BankPayment реквизит "Basis document" значением '$$PurchaseInvoiceAging$$'. 
+
+_1002020 create Credit note and check Aging register movements
+Ошибка открытия гиперссылки при проверке движений документа. Спиок документов пуст.
+Так же как в п.1) не понятно почему документов нет.
+
+5)Value is not of object type (TaxRate)
+_1000055 check Aging sum when delete row from PI
+_1002003 check Aging tab in the Purchase invoice
+_1020050 check the offset of Purchase invoice advance (type of settlement by documents)
+
+Во всех трех ошибках в табличной части документа "PurchaseInvoice" воодится значение не соответствующее типу реквизита "Item key".
+
+
